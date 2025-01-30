@@ -1,25 +1,13 @@
-# Use Ubuntu 20.04 as the base image
+
 FROM ubuntu:20.04
-
-# Set non-interactive mode to prevent interactive prompts
-ENV DEBIAN_FRONTEND=noninteractive
-
-# Set working directory inside the container
-WORKDIR /app
-
-# Copy all files to the container
 COPY . .
-
-# Update system packages and install dependencies
-RUN apt-get update -y && apt-get upgrade -y && \
-    apt-get install -y wget ffmpeg sox megatools python3-pip mediainfo && \
-    rm -rf /var/lib/apt/lists/*  # Clean up APT cache
-
-# Install Python dependencies
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Make the start script executable
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update -y
+RUN apt-get upgrade -y
+RUN apt-get -y install wget ffmpeg
+RUN wget https://mediaarea.net/repo/deb/repo-mediaarea_1.0-25_all.deb
+RUN dpkg -i repo-mediaarea_1.0-25_all.deb
+RUN apt-get update -y
+RUN apt-get -y install mediainfo megatools python3-pip sox
+RUN pip install --upgrade bs4 lxml google-api-python-client google-auth-httplib2 google-auth-oauthlib pycryptodomex pillow pyrogram tgcrypto pycryptodomex python-dotenv m3u8
 RUN chmod +x start.sh
-
-# Run the bot
-CMD ["bash", "start.sh"]
