@@ -15,7 +15,7 @@ Multi-Utility bot for telegram!
 
 - Download the json and save it as `credentials.json`.    
 - `git clone https://github.com/bunnykek/MediaInfoBot`     
-- Navigate into the `TokenGeneration` directory and follow the [readme.txt](https://github.com/bunnykek/MediaInfoBot/blob/main/TokenGeneration/readme.txt) for further procedure.
+- Navigate into the `TokenGeneration` directory and follow the [readme.txt](https://github.com/20255-ec-118/mediainfo-tg/blob/main/TokenGeneration/readme.txt) for further procedure.
 - Deploy to heroku 
 #### Heroku Deploy
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/bunnykek/MediaInfoBot)
