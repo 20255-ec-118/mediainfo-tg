@@ -1,6 +1,7 @@
+
 {
     "name": "MediaInfoBot",
-    "description": "Multiutility Telegram bot by Bunny",
+    "description": "Multiutility telegram bot by bunny",
     "repository": "https://github.com/bunnykek/MediaInfoBot",
     "logo": "https://imgur.com/UsUog2Z.png",
     "keywords": [
@@ -9,43 +10,43 @@
         "mediainfo",
         "spectrogram-bot"
     ],
-    "stack": "container",
     "env": {
-        "API_ID": {
+        "api_id": {
             "description": "Get your api_id from https://my.telegram.org/apps",
-            "required": true
+            "value": "12345"
         },
-        "API_HASH": {
+        "api_hash": {
             "description": "Get your api_hash from https://my.telegram.org/apps",
-            "required": true
+            "value": "0123456789abcdef0123456789abcdef"
         },
-        "BOT_TOKEN": {
-            "description": "Get your bot's token from https://telegram.me/BotFather",
-            "required": true
+        "bot_token": {
+            "description": "Get your bot's token from https://telegram.me/BotFather ",
+            "value": "XXXXXXXXXX:YYYYYYYYYYYYYYYYYYYYYYYYY"
         },
-        "GDTOT_PHP": {
+        "gdtot_php": {
             "description": "Get it from GDTOT cookies",
-            "required": false
+            "value": ""
         },
-        "GDTOT_CRYPT": {
+        "gdtot_crypt": {
             "description": "Get it from GDTOT cookies",
-            "required": false
+            "value": ""
         },
-        "APPDRIVE_PHP": {
+        "appdrive_php": {
             "description": "Get it from AppDrive cookies",
-            "required": false
+            "value": ""
         },
-        "APPDRIVE_MD": {
+        "appdrive_md": {
             "description": "Get it from AppDrive cookies",
-            "required": false
+            "value": ""
         },
-        "TOKEN_JSON": {
+        "token_json": {
             "description": "token.json contents",
-            "required": false
+            "value": "{...}"
         },
-        "OWNER": {
-            "description": "Bot owner Telegram ID",
-            "required": false
+        "owner": {
+            "description": "Bot owner telegram ID",
+            "value": ""
         }
-    }
+    },
+    "stack": "container"
 }
